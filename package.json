@@ -1,0 +1,26 @@
+{
+  "name": "ckanondocker",
+  "version": "1.0.0",
+  "description": "Ckan on Docker",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldi42/CkanOnDocker.git"
+  },
+  "keywords": [
+    "ckan",
+    "docker"
+  ],
+  "author": "goldi42",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goldi42/CkanOnDocker/issues"
+  },
+  "homepage": "https://github.com/goldi42/CkanOnDocker#readme",
+  "dependencies": {
+    "ckan_builder": "git+https://github.com/goldi42/ckan_builder.git#v0.4.0"
+  }
+}
