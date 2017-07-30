@@ -1,0 +1,55 @@
+
+# docker-compose up
+
+version: '3.3'
+
+services:
+  ckan_app:
+    container_name: ckan_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - solr
+      - db
+    ports:
+      - "8000:8000"
+    volumes:
+      - type: volume
+        source: ckan_volume
+        target: /app/uploads
+      - type: bind
+        source: ./extensions
+        target: /app/extensions
+      - type: bind
+        source: ./ckanconfig.json
+        target: /app/ckanconfig.json
+    environment:
+      init_database: 0
+      environment: development
+  solr:
+    container_name: ckan_search
+    build:
+      context: docker/Solr
+      dockerfile: Dockerfile
+    ports:
+      - "8983:8983"
+  db:
+    container_name: ckan_database
+    build:
+      context: docker/Postgres
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_USER: ckan_default
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: ckan_default
+      LANG: de_DE.utf8
+    ports:
+      - "5432:5432"
+    volumes:
+      - type: volume
+        source: ckan_db
+        target: /var/lib/postgresql/data
+volumes:
+  ckan_volume:
+  ckan_db:
