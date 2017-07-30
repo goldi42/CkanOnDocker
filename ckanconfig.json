@@ -1,0 +1,20 @@
+{
+    "ckan": {
+        "version": "2.5.5"
+    },
+    "components": [
+        {"name": "extensions", "path": "./extensions"},
+        {"name": "vendor", "path": "./vendor"}
+    ],
+    "config": {
+        "plugins": [
+            {"name": "stats", "active":true},
+            {"name": "text_view", "active":true},
+            {"name": "image_view", "active":true},
+            {"name": "recline_view", "active":true}
+        ]
+    },
+    "extensions": [
+        {"name": "ckanext-scheming", "version": "master", "type": "VCS", "repository": "git+https://github.com/ckan/ckanext-scheming.git"}
+    ]
+}
