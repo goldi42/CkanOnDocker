@@ -9,6 +9,7 @@ ENV init_database=false
 
 VOLUME /app/uploads
 VOLUME /app/extensions
+VOLUME /build
 
 WORKDIR /app
 

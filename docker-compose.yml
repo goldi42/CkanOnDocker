@@ -22,8 +22,8 @@ services:
         source: ./extensions
         target: /app/extensions
       - type: bind
-        source: ./ckanconfig.json
-        target: /app/ckanconfig.json
+        source: ./
+        target: /build
     environment:
       init_database: 0
       environment: development
