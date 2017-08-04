@@ -18,6 +18,9 @@ until $(nc -zv db 5432); do
     sleep 5
 done
 
+echo "Update ckanconfig"
+cp /build/ckanconfig.json ./
+
 echo "All servies are up starting CKAN..."
 
 echo "Install CKAN extensions"
