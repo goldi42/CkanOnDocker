@@ -1,10 +1,11 @@
 {
     "ckan": {
-        "version": "2.5.5"
+        "version": "2.7.0"
     },
     "components": [
         {"name": "extensions", "path": "./extensions"},
-        {"name": "vendor", "path": "./vendor"}
+        {"name": "vendor", "path": "./vendor"},
+        {"name": "logs", "path": "./logs/"}
     ],
     "config": {
         "plugins": [
@@ -16,5 +17,8 @@
     },
     "extensions": [
         {"name": "ckanext-scheming", "version": "master", "type": "VCS", "repository": "git+https://github.com/ckan/ckanext-scheming.git"}
-    ]
+    ],
+    "filelog": {
+        "filename": "ckanbuilder.log"
+    }
 }
