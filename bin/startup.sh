@@ -18,6 +18,13 @@ until $(nc -zv db 5432); do
     sleep 5
 done
 
+echo "Waiting for redis"
+until $(nc -zv db 6379); do
+    printf '.'
+    sleep 5
+done
+
+
 echo "Update ckanconfig"
 cp /build/ckan.json ./
 
