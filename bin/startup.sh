@@ -19,7 +19,7 @@ until $(nc -zv db 5432); do
 done
 
 echo "Update ckanconfig"
-cp /build/ckanconfig.json ./
+cp /build/ckan.json ./
 
 echo "All servies are up starting CKAN..."
 
