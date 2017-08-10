@@ -15,7 +15,7 @@ RUN mkdir -p /opt/solr/server/solr/$SOLR_CORE/data
 
 # Adding Files
 ADD https://raw.githubusercontent.com/ckan/ckan/master/contrib/docker/solr/solrconfig.xml \
-https://raw.githubusercontent.com/ckan/ckan/ckan-2.5.5/ckan/config/solr/schema.xml \
+https://raw.githubusercontent.com/ckan/ckan/ckan-2.7.0/ckan/config/solr/schema.xml \
 https://raw.githubusercontent.com/apache/lucene-solr/releases/lucene-solr/6.3.0/solr/server/solr/configsets/basic_configs/conf/currency.xml \
 https://raw.githubusercontent.com/apache/lucene-solr/releases/lucene-solr/6.3.0/solr/server/solr/configsets/basic_configs/conf/synonyms.txt \
 https://raw.githubusercontent.com/apache/lucene-solr/releases/lucene-solr/6.3.0/solr/server/solr/configsets/basic_configs/conf/stopwords.txt \
