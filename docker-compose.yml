@@ -12,6 +12,7 @@ services:
     depends_on:
       - solr
       - db
+      - redis
     ports:
       - "8000:8000"
     volumes:
@@ -50,6 +51,13 @@ services:
       - type: volume
         source: ckan_db
         target: /var/lib/postgresql/data
+  redis:
+    container_name: ckan_redis
+    build:
+      context: docker/Redis
+      dockerfile: Dockerfile
+    ports:
+      - "6379:6379"
 volumes:
   ckan_volume:
   ckan_db:
