@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/goldi42/CkanOnDocker#readme",
   "dependencies": {
-    "ckan_builder": "git+https://github.com/goldi42/ckan_builder.git#v0.4.0"
+    "ckan_builder": "git+https://github.com/goldi42/CKANbuilder.git#v1.0.0"
   }
 }
