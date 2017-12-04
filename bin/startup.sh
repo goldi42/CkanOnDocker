@@ -19,7 +19,7 @@ until $(nc -zv db 5432); do
 done
 
 echo "Waiting for redis"
-until $(nc -zv db 6379); do
+until $(nc -zv redis 6379); do
     printf '.'
     sleep 5
 done
